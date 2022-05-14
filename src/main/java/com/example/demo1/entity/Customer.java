@@ -1,5 +1,7 @@
 package com.example.demo1.entity;
 
+import com.example.demo1.util.DateTimeHelper;
+
 import java.time.LocalDateTime;
 
 public class Customer {
@@ -33,9 +35,12 @@ public class Customer {
         this.status = 1;
     }
 
-    public Customer(){
+    public Customer() {
+        this.ID = Integer.parseInt("");
+        this.name = "";
+        this.phone = "";
+        this.img = "";
     }
-
 
 
     public String toString(){
@@ -114,4 +119,10 @@ public class Customer {
         this.status = status;
     }
 
+    public String getDobString() {
+        if(this.dob != null){
+            return DateTimeHelper.convertLocalDateTimeToString(this.dob);
+        }
+        return "";
+    }
 }

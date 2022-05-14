@@ -3,4 +3,74 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+<!--    home servlet-->
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.example.demo1.controller.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+<!--    register servlet    -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.example.demo1.controller.customer.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+<!--    create customer servlet    -->
+    <servlet>
+        <servlet-name>CreateCustomerServlet</servlet-name>
+        <servlet-class>com.example.demo1.controller.admin.CreateCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateCustomerServlet</servlet-name>
+        <url-pattern>/admin/create-customer</url-pattern>
+    </servlet-mapping>
+
+<!--    list servlet    -->
+    <servlet>
+        <servlet-name>CustomerListServlet</servlet-name>
+        <servlet-class>com.example.demo1.controller.admin.CustomerListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerListServlet</servlet-name>
+        <url-pattern>/admin/list</url-pattern>
+    </servlet-mapping>
+
+<!--    delete customer servlet    -->
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.example.demo1.controller.admin.DeleteCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/admin/delete-customer</url-pattern>
+    </servlet-mapping>
+
+<!--    detail customer servlet   -->
+    <servlet>
+        <servlet-name>DetailCustomerServlet</servlet-name>
+        <servlet-class>com.example.demo1.controller.admin.DetailCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailCustomerServlet</servlet-name>
+        <url-pattern>/admin/detail-customer</url-pattern>
+    </servlet-mapping>
+
+<!--    edit customer servlet   -->
+    <servlet>
+        <servlet-name>EditCustomerServlet</servlet-name>
+        <servlet-class>com.example.demo1.controller.admin.EditCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditCustomerServlet</servlet-name>
+        <url-pattern>/admin/edit-customer</url-pattern>
+    </servlet-mapping>
 </web-app>
