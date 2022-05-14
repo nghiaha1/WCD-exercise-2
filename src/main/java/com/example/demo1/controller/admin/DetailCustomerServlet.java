@@ -28,7 +28,7 @@ public class DetailCustomerServlet extends HttpServlet {
         }else {
             // nếu có trả về trang detail
             req.setAttribute("customer", customer);
-            req.getRequestDispatcher("/admin/customers/tables/detail.jsp").forward(req, resp);
+            req.getRequestDispatcher("/admin/customers/list.jsp").forward(req, resp);
         }
     }
 }
